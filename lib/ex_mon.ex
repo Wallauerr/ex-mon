@@ -40,4 +40,6 @@ defmodule ExMon do
     move = {:ok, Enum.random(@computer_moves)}
     do_move(move)
   end
+
+  defp computer_move(_), do: :ok
 end
