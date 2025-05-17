@@ -17,6 +17,9 @@ defmodule ExMon.Game.Actions.Attack do
 
   defp calculate_power(:avg), do: Enum.random(@move_avg_power)
   defp calculate_power(:rnd), do: Enum.random(@move_rnd_power)
+  defp calculate_power(:move_avg), do: Enum.random(@move_avg_power)
+  defp calculate_power(:move_rnd), do: Enum.random(@move_rnd_power)
+  defp calculate_power(:move_heal), do: 0
 
   defp calcuate_total_life(life, damage) when life - damage < 0, do: 0
   defp calcuate_total_life(life, damage), do: life - damage
