@@ -101,4 +101,15 @@ defmodule ExMon.GameTest do
       assert expected_response == Game.player()
     end
   end
+
+  describe "turn/0" do
+    test "returns the turn" do
+      player = Player.build("Wallauer", :chute, :soco, :cura)
+      computer = Player.build("Robot", :chute, :soco, :cura)
+
+      Game.start(computer, player)
+
+      assert :player == Game.turn()
+    end
+  end
 end
